@@ -1,0 +1,15 @@
+# Node
+node_modules/
+.env
+.DS_Store
+dist/
+*.log
+
+# Netlify local state
+.netlify/state.json
+
+# OS
+Thumbs.db
+
+# Codebase
+repomix-output.txt

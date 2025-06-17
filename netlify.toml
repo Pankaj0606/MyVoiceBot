@@ -1,0 +1,12 @@
+# netlify.toml
+# This file tells Netlify where to find your serverless functions.
+[build]
+functions = "netlify/functions"
+publish = "." # Your static files (index.html, script.js) are in the root directory
+
+[dev]
+framework = "#static"
+publish = "." # For local development, serve static files from the root
+functions = "netlify/functions"
+port = 8888 # Ensure the dev server runs on 8888 as your script expects
+envFiles = [".env"]

@@ -1,0 +1,39 @@
+/* Custom styles for the app */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Style for the pulsing animation when listening */
+.is-listening {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); /* Using Tailwind's blue-400 */
+    }
+    70% {
+        box-shadow: 0 0 0 25px rgba(96, 165, 250, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(96, 165, 250, 0);
+    }
+}
+
+/* Simple scrollbar styling for a dark theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937; /* gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563; /* gray-600 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; /* gray-500 */
+}

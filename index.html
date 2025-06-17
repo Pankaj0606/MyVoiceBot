@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Voice Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white h-screen flex overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 border-r border-gray-700 p-4 flex flex-col">
+        <h2 class="text-xl font-bold mb-4">Chats</h2>
+        <ul id="chat-history" class="flex-grow space-y-2 overflow-y-auto">
+            <!-- Chat history items added by JS -->
+        </ul>
+        <div class="pt-4 border-t border-gray-700">
+            <button id="clear-all" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded">Clear All</button>
+        </div>
+    </aside>
+
+    <!-- Main Chat View -->
+    <div id="chat-view" class="flex-1 flex flex-col p-4 md:p-6 bg-gray-800">
+        <div class="flex items-center justify-between pb-4 border-b border-gray-700">
+            <h1 class="text-2xl font-bold">My Personal Voice Bot</h1>
+            <button id="mute-toggle" class="bg-blue-600 px-4 py-2 rounded text-white hover:bg-blue-700">🔊 Mute</button>
+        </div>
+
+        <!-- Conversation log -->
+        <div id="conversation-log" class="flex-grow my-4 space-y-4 overflow-y-auto pr-2">
+            <div class="flex items-start gap-3">
+                <div class="p-2 rounded-full flex-shrink-0">
+                    <img src="images/your-photo.jpg" alt="Bot" class="w-6 h-6 rounded-full" />
+                </div>
+                <div class="bg-gray-700 rounded-lg p-3 text-white">
+                    <p>Hi there! I'm ready. You can ask me about my life, my strengths, or how I grow. Just press the microphone button or type below.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Indicator -->
+        <div id="status" class="text-center text-gray-400 h-6 mb-2"></div>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-2">
+            <button id="talk-button" class="bg-blue-600 rounded-full p-2 hover:scale-105 transition">
+                <div class="bg-blue-600 p-2 rounded-full flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a2 2 0 00-2 2v6a2 2 0 004 0V4a2 2 0 00-2-2zM4 10a6 6 0 0012 0h-1a5 5 0 01-10 0H4z" clip-rule="evenodd"/>
+                        <path d="M9 18h2v2H9z" />
+                    </svg>
+                </div>
+            </button>
+            <input id="text-input" type="text" placeholder="Ask a question..." class="flex-grow p-3 rounded-xl bg-gray-700 text-white focus:outline-none" />
+            <button id="send-button" class="bg-blue-600 px-4 py-2 rounded-xl text-white font-medium hover:bg-blue-700">Send</button>
+            <button id="clear-chat" class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-700">Clear Chat</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

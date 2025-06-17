@@ -1,0 +1,15 @@
+{
+  "name": "myvoicebot",
+  "version": "1.0.0",
+  "description": "A personal voice bot powered by Netlify and Google Gemini.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
